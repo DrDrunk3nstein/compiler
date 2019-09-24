@@ -54,6 +54,21 @@
                 </select>
               </div>
 
+              <!-- MicroService -->
+              <div class="form-group">
+                  <label>MicroServizi</label><br>
+                    <input type="checkbox" value="microservice1">CrowdTesting<br>
+                    <input type="checkbox" value="microservice2">CrowdMeasure<br>
+                    <input type="checkbox" value="microservice3">CrowdSurvey<br>
+                    <input type="checkbox" value="microservice4">Virtual Action<br>
+                    <input type="checkbox" value="microservice5">CrowdVoting<br>
+                    <input type="checkbox" value="microservice6">Physical Action<br>
+                    <input type="checkbox" value="microservice7">CrowdCare<br>
+                    <input type="checkbox" value="microservice8">Interview<br>
+                    <input type="checkbox" value="microservice9">Recheck<br>
+                    <input type="checkbox" value="microservice10">Function Coverage<br>
+              </div>
+
               <!-- Channel -->
               <div class="form-group">
                 <label>Canale</label>
@@ -97,7 +112,7 @@
                   <option value="mobilità">Mobilità</option>
                   <option value="pa">PA</option>
                   <option value="energia">Enrgia</option>
-                  <option value="otheractivity">Altro</option>
+                  <option value="otherbusinessfield">Altro</option>
                 </select>
               </div>
 
@@ -112,27 +127,37 @@
                 </select>
               </div>
 
-
-
-              <!-- MicroService -->
+              <!-- TestingEnvironment -->
               <div class="form-group">
-                  <label>MicroServizi</label><br>
-                    <input type="checkbox" value="microservice1">CrowdTesting<br>
-                    <input type="checkbox" value="microservice2">CrowdMeasure<br>
-                    <input type="checkbox" value="microservice3">CrowdSurvey<br>
-                    <input type="checkbox" value="microservice4">Virtual Action<br>
-                    <input type="checkbox" value="microservice5">CrowdVoting<br>
-                    <input type="checkbox" value="microservice6">Physical Action<br>
-                    <input type="checkbox" value="microservice7">CrowdCare<br>
-                    <input type="checkbox" value="microservice8">Interview<br>
-                    <input type="checkbox" value="microservice9">Recheck<br>
-                    <input type="checkbox" value="microservice10">Function Coverage<br>
+                <label>Ambiente</label>
+                <select class="custom-select custom-select-sm">
+                  <option value="" disabled selected>Seleziona un Ambiente</option>
+                  <option value="preesercizio">Pre Esercizio</option>
+                  <option value="esercizio">Esercizio</option>
+                </select>
+              </div>
+
+              <!-- CustomerBase -->
+              <div class="form-group">
+                  <label>CustomerBase</label><br>
+                    <input type="checkbox" value="customerbase">CustomerBase > 100.000<br>
+              </div>
+
+              <!-- Rete -->
+              <div class="form-group">
+                <label>Rete</label>
+                <select class="custom-select custom-select-sm">
+                  <option value="" disabled selected>Seleziona una tipologia di Rete</option>
+                  <option value="mobile">Mobile</option>
+                  <option value="fisso">Fisso</option>
+                  <option value="mobilefisso">Mobile + Fisso</option>
+                </select>
               </div>
 
               <!-- TestObject -->
               <div class="form-group">
                 <label class="d-block">Oggetto da Testare</label>
-                <!-- Rimuovi "custom-control-inline" dentro "class" se vuoi averli uno sotto l'altro -->
+                <!-- Aggiungi "custom-control-inline" dentro "class" se vuoi averli accanto -->
                 <div class="custom-control custom-radio">
                   <input type="radio" id="service_1" name="service" class="custom-control-input">
                   <label class="custom-control-label" for="service_1">App</label>
@@ -152,6 +177,16 @@
                 <div class="custom-control custom-radio">
                   <input type="radio" id="service_5" name="service" class="custom-control-input">
                   <label class="custom-control-label" for="service_5">Altro</label>
+
+                  <!-- PreStaffing -->
+                  <div class="form-group">
+                    <label>Prestaffing</label>
+                    <select class="custom-select custom-select-sm">
+                      <option value="" disabled selected>Richiesta Prestaffing</option>
+                      <option value="prestaffing">Prestaffing</option>
+                    </select>
+                    
+                  </div>
                 </div>
               </div>
             </form>
