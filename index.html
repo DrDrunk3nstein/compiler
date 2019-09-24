@@ -5,50 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./static/css/bootstrap.min.css" >
   </head>
+
+    <figure>
+      <img src="index.png" alt="Clariter" style="width:15%">
+    </figure>
+
   <body>
       <div class="container">
         <div class="row">
           <div class="col-sm">
             <form class="mt-4">
+
               <!-- Client -->
               <div class="form-group">
                 <label>Cliente</label>
                 <select class="custom-select custom-select-sm">
-                  <option selected>Seleziona un cliente</option>
+                  <option value="" disabled selected>Seleziona un Cliente</option>
                   <option value="tim">TIM</option>
-                  <option value="eni">ENI</option>
-                  <option value="poste">POSTE</option>
+                  <option value="aci">Aci</option>
+                  <option value="poste">Poste</option>
+                  <option value="infocamere">Infocamere</option>
                   <option value="bcc">BCC</option>
-                </select>
-              </div>
-
-              <!-- Device -->
-              <div class="form-group">
-                <label>Dispositivo</label>
-                <select class="custom-select custom-select-sm">
-                  <option selected>Seleziona un dispositivo</option>
-                  <option value="android">Android</option>
-                  <option value="ios">iOS</option>
-                  <option value="windowsphone">WindowsPhone</option>
-                  <option value="stb">STB</option>
+                  <option value="acea">Acea</option>
+                  <option value="enel">Enel</option>
+                  <option value="octotelematics">Octo Telematics</option>
+                  <option value="sky">Sky</option>
+                  <option value="nuovavoce">...</option>
                 </select>
               </div>
 
               <!-- Service -->
               <div class="form-group">
-                <label class="d-block">Servizio</label>
+                <label>Servizi</label>
+                <select class="custom-select custom-select-sm">
+                  <option value="" disabled selected>Seleziona un Servizio</option>
+                  <option value="timvision">TimVision</option>
+                  <option value="timmusic">TimMusic</option>
+                  <option value="timgames">TimGames</option>
+                  <option value="iotim">ioTim</option>
+                  <option value="stbfw">Stb FW</option>
+                  <option value="enjoy">Enjoy</option>
+                  <option value="relaxbanking">Relax Banking</option>
+                  <option value="postepay">PostePay</option>
+                  <option value="postepayplus">PostePay Plus</option>
+                  <option value="skystore">SkyStore</option>
+                  <option value="dazn">DAZN</option>
+                  <option value="nuovavoce">...</option>
+                </select>
+              </div>
+
+              <!-- Channel -->
+              <div class="form-group">
+                <label>Canale</label>
+                <select class="custom-select custom-select-sm">
+                  <option value="" disabled selected>Seleziona un Canale</option>
+                  <option value="android">Android</option>
+                  <option value="ios">iOS</option>
+                  <option value="windows">Windows</option>
+                  <option value="osx">OSX</option>
+                  <option value="linux">Linux</option>
+                  <option value="windowsphone">WindowsPhone</option>
+                  <option value="web">Web</option>
+                  <option value="msite">mSite</option>
+                  <option value="web/msite">web/mSite</option>
+                  <option value="androidtv">Andorid TV</option>
+                  <option value="stb">STB</option>
+                  <option value="androidauto">Android Auto</option>
+                </select>
+              </div>
+
+              <!-- MicroService -->
+              <div class="form-group">
+                  <label>MicroServizi</label><br>
+                    <input type="checkbox" value="microservice1">CrowdTesting<br>
+                    <input type="checkbox" value="microservice2">CrowdMeasure<br>
+                    <input type="checkbox" value="microservice3">CrowdSurvey<br>
+                    <input type="checkbox" value="microservice4">Virtual Action<br>
+                    <input type="checkbox" value="microservice5">CrowdVoting<br>
+                    <input type="checkbox" value="microservice6">Physical Action<br>
+                    <input type="checkbox" value="microservice7">CrowdCare<br>
+                    <input type="checkbox" value="microservice8">Interview<br>
+                    <input type="checkbox" value="microservice9">Recheck<br>
+                    <input type="checkbox" value="microservice10">Function Coverage<br>
+              </div>
+
+              <!-- TestObject -->
+              <div class="form-group">
+                <label class="d-block">Oggetto da Testare</label>
                 <!-- Rimuovi "custom-control-inline" dentro "class" se vuoi averli uno sotto l'altro -->
-                <div class="custom-control custom-radio custom-control-inline">
+                <div class="custom-control custom-radio">
                   <input type="radio" id="service_1" name="service" class="custom-control-input">
-                  <label class="custom-control-label" for="service_1">1</label>
+                  <label class="custom-control-label" for="service_1">App</label>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline">
+                <div class="custom-control custom-radio">
                   <input type="radio" id="service_2" name="service" class="custom-control-input">
-                  <label class="custom-control-label" for="service_2">2</label>
+                  <label class="custom-control-label" for="service_2">Firmware</label>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline">
+                <div class="custom-control custom-radio">
                   <input type="radio" id="service_3" name="service" class="custom-control-input">
-                  <label class="custom-control-label" for="service_3">3</label>
+                  <label class="custom-control-label" for="service_3">Portale Web/mSite</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="service_4" name="service" class="custom-control-input">
+                  <label class="custom-control-label" for="service_4">Processi</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="service_5" name="service" class="custom-control-input">
+                  <label class="custom-control-label" for="service_5">Altro</label>
                 </div>
               </div>
             </form>
