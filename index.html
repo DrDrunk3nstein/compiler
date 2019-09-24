@@ -1,35 +1,64 @@
-<p><head>
- <b>Cliente</b>
-  </head></p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" >
+  </head>
+  <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <form class="mt-4">
+              <!-- Client -->
+              <div class="form-group">
+                <label>Cliente</label>
+                <select class="custom-select custom-select-sm">
+                  <option selected>Seleziona un cliente</option>
+                  <option value="tim">TIM</option>
+                  <option value="eni">ENI</option>
+                  <option value="poste">POSTE</option>
+                  <option value="bcc">BCC</option>
+                </select>
+              </div>
 
+              <!-- Device -->
+              <div class="form-group">
+                <label>Dispositivo</label>
+                <select class="custom-select custom-select-sm">
+                  <option selected>Seleziona un dispositivo</option>
+                  <option value="android">Android</option>
+                  <option value="ios">iOS</option>
+                  <option value="windowsphone">WindowsPhone</option>
+                  <option value="stb">STB</option>
+                </select>
+              </div>
 
-<select>
- <option value="0">-Seleziona-</option>
- <option value="1">TIM</option>
- <option value="2">ENI</option>
- <option value="3">POSTE</option>
- <option value="4">BCC</option>
-</select>
+              <!-- Service -->
+              <div class="form-group">
+                <label class="d-block">Servizio</label>
+                <!-- Rimuovi "custom-control-inline" dentro "class" se vuoi averli uno sotto l'altro -->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="service_1" name="service" class="custom-control-input">
+                  <label class="custom-control-label" for="service_1">1</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="service_2" name="service" class="custom-control-input">
+                  <label class="custom-control-label" for="service_2">2</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="service_3" name="service" class="custom-control-input">
+                  <label class="custom-control-label" for="service_3">3</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-<p><head>
-  <b>Device</b>
-  </head></p>
-
-
-<select>
- <option value="0">-Seleziona-</option>
- <option value="">Android</option>
- <option value="">iOS</option>
- <option value="">WindowsPhone</option>
- <option value="">STB</option>
-</select>
-
-<div>
-  <h3>Servizio</h3>
-  <p><label>
-   <input type="checkbox" class="radio" value="1" name="[]" />1</p>
-  <p>
-   <input type="checkbox" class="radio" value="1" name="[]" />2</p>
-  <p>
-   <input type="checkbox" class="radio" value="1" name="[]" />3</p>
-</div>
+    <!-- Scripts JS per Bootstrap -->
+    <script src="./static/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+  </body>
+</html>
