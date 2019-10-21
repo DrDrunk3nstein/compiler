@@ -12,21 +12,24 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <div class="row">
-          <class="col-sm-6">
+          <class="col">
           <img src="index003.png" alt="Clariter">
-          <div class="col">
-            <h5 class="mt-0">Campaign</h5>
-            <h5 class="mt-0">Requirements</h5>
-            <h5 class="mt-0">Assistent</h5>
-          </div>
         </div>
       </div>
+
+      <div class="col">
+        <h5 class="mt-3">Campaign</h5>
+        <h5 class="mt-2">Requirements</h5>
+        <h5 class="mt-1">Assistent</h5>
+      </div>
+
     </div>
+
 
 
     <div class="row form-group">
       <!-- BusinessField -->
-      <div class="form-group col-sm">
+      <fieldset class="form-group col-sm">
         <label>Settore</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Settore</option>
@@ -37,9 +40,9 @@
           <option value="energia">Enrgia</option>
           <option value="otherbusinessfield">Altro</option>
         </select>
-      </div>
+      </fieldset>
       <!-- Client -->
-      <div class="form-group col-sm">
+      <fieldset class="form-group col-sm">
         <label>Cliente</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Cliente</option>
@@ -54,9 +57,9 @@
           <option value="sky">Sky</option>
           <option value="newclient"></option>
         </select>
-      </div>
+      </fieldset>
       <!-- Service -->
-      <div class="col-sm">
+      <fieldset class="form group col-sm">
         <label>Servizi</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Servizio</option>
@@ -73,17 +76,20 @@
           <option value="dazn">DAZN</option>
           <option value="otherservice">Altro</option>
         </select>
+      </fieldset>
+
+      <!-- StartDate -->
+      <div class="form group col-sm-2">
+        <label for="date">DataStart</label>
+        <input type="date" class="form-control" id="date" name="date">
+        <script src="./static/js/app.js"></script>
       </div>
-      <!-- Version -->
-      <div class="col-sm-2">
-        <label>Versione</label>
-        <input type="textarea" class="form-control" placeholder="V.0.0.0"name="version">
-      </div>
+
     </div>
 
     <div class="row form-group">
       <!-- Channel -->
-      <div class="col-sm">
+      <div class="form group col-sm">
         <label>Canale</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Canale</option>
@@ -102,7 +108,7 @@
         </select>
       </div>
       <!-- Activity -->
-      <div class="col-3">
+      <div class="form group col-sm">
         <label>Tipo Attività</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Tipo Attività</option>
@@ -114,7 +120,7 @@
         </select>
       </div>
       <!-- TestingEnvironment -->
-      <div class="col">
+      <div class="form group col-sm">
         <label>Ambiente</label>
         <select class="custom-select custom-select-sm-2">
           <option value="" disabled selected>Seleziona un Ambiente</option>
@@ -122,9 +128,15 @@
           <option value="esercizio">Esercizio</option>
         </select>
       </div>
+      <!-- Version -->
+      <fieldset class="col-sm-2">
+        <label>Versione</label>
+        <input type="textarea" class="form-control" placeholder="V.0.0.0"name="version">
+      </fieldset>
+
     </div>
 
-    <div class="row justify-content-center">
+    <div class="row form-group">
       <!-- MicroService -->
       <div class="col-sm-auto">
         <label>MicroServizi</label><br>
@@ -169,17 +181,9 @@
         <label></label><br>
         <input type="checkbox" value="customerbase">CustomerBase > 100.000<br>
       </div>
-      <!-- StartDate -->
-      <div class="col">
-        <label for="date">DataStart</label>
-        <input type="date" class="form-control" id="date" name="date">
-        <script src="./static/js/app.js"></script>
-      </div>
-    </div>
 
-  <p><div class="row form-group">
       <!-- CrowderType -->
-      <div class="col-sm">
+      <div class="col-sm-4">
         <label>Tipo Crowder</label>
         <select class="custom-select custom-select-sm">
           <option value="" disabled selected>Seleziona un Tipo Crowder</option>
@@ -188,8 +192,6 @@
           <option value="outlabe2e">Esperti in Accessibilità</option>
         </select>
       </div>
-    </p>
-
       <!-- Rete -->
       <div class="col-sm">
         <label>Rete</label>
@@ -201,25 +203,49 @@
         </select>
       </div>
 
+    </div>
+
     <!-- PreStaffing -->
-    <div class="col-md">
-      <label>Prestaffing</label>
-      <select class="custom-select custom-select-sm">
-        <option value="" disabled selected>Richiesta Prestaffing</option>
-        <option value="prestaffing">Prestaffing</option>
-        <option value="noprestaffing">No Prestaffing</option>
-      </select>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text"></span>
+    <div class="row justify-content-center">
+      <fieldset class="form-group col-sm-2">
+        <label for="Prestaffing">Prestaffing</label>
+        <select class="custom-select custom-select-sm" id="Prestaffing">
+          <option value="" disabled selected>Richiesta Prestaffing</option>
+          <option value="No Prestaffing">No Prestaffing</option>
+          <option value="Prestaffing">Prestaffing</option>
+        </select>
+      </fieldset>
+    </div>
+    <!-- Below will only show if PreStaffing is selected -->
+    <fieldset class="form-group wfiedls"style="display:none;">
+      <div class="input-group justify-content-center">
+        <span class="input-group-text"></span>
+        <textarea class="form-control-md" placeholder="Requisito1, Requisito2.."></textarea>
+      </div>
+    </fieldset>
+
+    <!-- Above will only show if PreStaffing is selected -->
+
+    <!-- Submit Button -->
+    <p><div class"container">
+      <div class="row">
+        <div class="mx-auto">
+          <button class="btn btn-primary" id="Submit" type="submit">Export</button>
         </div>
-        <textarea class="form-control" placeholder="Requisito1, Requisito2" aria-label"asd"></textarea>
       </div>
     </div>
+  </p>
+
+  <!-- ProgressBar -->
+  <p><div id="progress" class="progress" role="progressbar">
+    <div class="progress-bar" role="progressbar" hidden="true">
+    </div>
+  </div></p>
+
+
+
+
 </div>
-
-
-  </div>
 </div>
 </div>
 </form>
@@ -227,9 +253,55 @@
 </div>
 </div>
 
+
+
 <!-- Scripts JS per Bootstrap -->
 <script src="./static/js/jquery-3.3.1.slim.min.js"></script>
 <script src="./static/js/popper.min.js"></script>
 <script src="./static/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#Prestaffing").on('change',function(){
+    var selectedBalue = $("#Prestaffing").val();
+    if (selectedBalue == "Prestaffing")
+    {
+      $(".wfiedls").slideDown(500);
+    }
+    else{
+      $(".wfiedls").slideUp(500);
+    }
+  });
+
+});
+</script>
+
+<script>
+$('#Submit').click(function() {
+
+  var timerId, percent;
+
+  // reset progress bar
+  percent = 0;
+  $('#Submit').attr('disabled', true);
+  $('#progress').css('width', '0px').addClass('progress-bar-animated active');
+  $('#progress').html('<span class="spinner-border spinner-border-sm ml-auto"> </span>');
+
+  timerId = setInterval(function() {
+
+    // increment progress bar
+    percent += 10;
+    $('#progress').css('width', percent + '%');
+
+    if (percent >= 100) {
+      clearInterval(timerId);
+      $('#Submit').attr('disabled', false);
+      $('#progress').removeClass('progress-bar-animated progress-bar-striped active').html('Export Requisiti Completato');
+    }
+  }, 300);
+});
+</script>
 </body>
 </html>
